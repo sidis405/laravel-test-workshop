@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Post;
 use Tests\TestCase;
+use WS\Models\Post;
 use Illuminate\Support\Str;
 
 class PostTest extends TestCase

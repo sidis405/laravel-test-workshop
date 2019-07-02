@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use App\Post;
-use App\Category;
 use Tests\TestCase;
+use WS\Models\Post;
+use WS\Models\Category;
 
 class PostCreationTest extends TestCase
 {

@@ -2,7 +2,7 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Tag;
+use WS\Models\Tag;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 

@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use App\Post;
 use Tests\TestCase;
+use WS\Models\Post;
 
 class PostViewingTest extends TestCase
 {

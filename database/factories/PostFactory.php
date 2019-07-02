@@ -2,7 +2,7 @@
 
 /* @var $factory \Illuminate\Database\Eloquent\Factory */
 
-use App\Post;
+use WS\Models\Post;
 use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
@@ -10,7 +10,7 @@ $factory->define(Post::class, function (Faker $faker) {
         'title' => $title = $faker->sentence,
         'preview' => $faker->paragraph,
         'body' => $faker->paragraph,
-        'user_id' => factory(App\User::class),
-        'category_id' => factory(App\Category::class),
+        'user_id' => factory(WS\Models\User::class),
+        'category_id' => factory(WS\Models\Category::class),
     ];
 });

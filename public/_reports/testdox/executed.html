@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2em;
+            }
+
+            body > ul > li {
+                font-family: Source Serif Pro, PT Sans, Trebuchet MS, Helvetica, Arial;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-family: Tahoma, Helvetica, Arial;
+                font-size: 3em;
+            }
+
+            ul {
+                list-style: none;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="Tests\Unit\PostTest">Unit\Post</h2>
+        <ul>
+            <li style="color: #555753;">✓ Post can create own slug</li>
+        </ul>
+        <h2 id="Tests\Feature\PostCreationTest">Feature\PostCreation</h2>
+        <ul>
+            <li style="color: #555753;">✓ Guest user cannot see post creation form</li>
+            <li style="color: #555753;">✓ User can see post creation form</li>
+            <li style="color: #555753;">✓ Guest user cannot create post</li>
+            <li style="color: #555753;">✓ User can create post</li>
+            <li style="color: #555753;">✓ Post creation has mandatory fields</li>
+        </ul>
+        <h2 id="Tests\Feature\PostViewingTest">Feature\PostViewing</h2>
+        <ul>
+            <li style="color: #555753;">✓ User can see post listing</li>
+            <li style="color: #555753;">✓ User can see single post</li>
+        </ul>
+    </body>
+</html>

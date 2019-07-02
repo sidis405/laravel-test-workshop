@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace WS\Http\Controllers;
 
-use App\Post;
+use WS\Models\Post;
 use Illuminate\Http\Request;
-use App\Http\Requests\PostRequest;
+use WS\Http\Requests\PostRequest;
+use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
@@ -20,7 +21,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return \App\Post::with('user', 'category', 'tags')->get();
+        return \WS\Models\Post::with('user', 'category', 'tags')->get();
     }
 
     /**
@@ -56,39 +57,5 @@ class PostsController extends Controller
     {
         $post->load('user', 'category', 'tags');
         return $post;
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Post $post)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Post $post)
-    {
-        //
     }
 }
