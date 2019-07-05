@@ -3,7 +3,7 @@
 namespace WS\Http\Controllers;
 
 use WS\Models\Post;
-use Illuminate\Http\Request;
+use App\Jobs\SendUpdateMail;
 use WS\Http\Requests\PostRequest;
 use App\Http\Controllers\Controller;
 
@@ -11,51 +11,47 @@ class PostsController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index', 'show');
-        // $this->middleware('auth')->only('create', 'store');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return \WS\Models\Post::with('user', 'category', 'tags')->get();
+        $this->middleware('auth')->except('index', 'show');  // $this->middleware('auth')->only('create', 'store');
+        // $this->middleware('can:update,post')->only('edit', 'update');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function index()
+    {
+        return Post::with('user', 'category', 'tags')->get();
+    }
+
     public function create()
     {
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(PostRequest $request)
     {
         $post = auth()->user()->posts()->create($request->validated());
 
+        $post->tags()->sync($request->tags);
+
         return redirect()->route('posts.show', $post);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
     public function show(Post $post)
     {
-        $post->load('user', 'category', 'tags');
-        return $post;
+        return $post->load('user', 'category', 'tags');
+    }
+
+    public function edit(Post $edit)
+    {
+        return view('posts.edit', compact('post'));
+    }
+
+    public function update(Post $post, PostRequest $request)
+    {
+        $post->update($request->validated());
+
+        $post->tags()->sync($request->tags);
+
+        SendUpdateMail::dispatch($post);
+
+        return redirect()->route('posts.show', $post);
     }
 }

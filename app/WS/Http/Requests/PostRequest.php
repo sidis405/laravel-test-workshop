@@ -28,6 +28,7 @@ class PostRequest extends FormRequest
             'category_id' => 'required',
             'preview' => 'required',
             'body' => 'required',
+            'cover' => 'sometimes',
         ];
     }
 }

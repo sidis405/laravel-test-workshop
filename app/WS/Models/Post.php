@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     protected $guarded = ['id'];
+    protected $casts = ['user_id' => 'integer'];
 
     public function user()
     {
@@ -31,5 +32,13 @@ class Post extends Model
     {
         $this->attributes['title'] = $title;
         $this->attributes['slug'] = Str::slug($title);
+    }
+
+    public function setCoverAttribute($cover)
+    {
+        $this->attributes['cover'] = $cover->storeAs(
+            'covers',
+            $cover->getClientOriginalName()
+        );
     }
 }

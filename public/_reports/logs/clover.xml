@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1562064679">
-  <project timestamp="1562064679">
+<coverage generated="1562318344">
+  <project timestamp="1562318344">
     <package name="WS\Http\Controllers">
       <file name="/Users/sid/Code/web/laravel-test-workshop/app/WS/Http/Controllers/PostsController.php">
         <class name="WS\Http\Controllers\PostsController" namespace="WS\Http\Controllers">
-          <metrics complexity="5" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="13" coveredelements="13"/>
+          <metrics complexity="7" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="18" coveredelements="5"/>
         </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="7"/>
-        <line num="14" type="stmt" count="7"/>
-        <line num="16" type="stmt" count="7"/>
-        <line num="22" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="24" type="stmt" count="1"/>
-        <line num="32" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="34" type="stmt" count="1"/>
-        <line num="43" type="method" name="store" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="45" type="stmt" count="1"/>
-        <line num="47" type="stmt" count="1"/>
-        <line num="56" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="58" type="stmt" count="1"/>
-        <line num="59" type="stmt" count="1"/>
-        <metrics loc="61" ncloc="37" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="13" coveredelements="13"/>
+        <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="16" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="21" type="method" name="create" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="26" type="method" name="store" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="35" type="method" name="show" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="40" type="method" name="edit" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="45" type="method" name="update" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <metrics loc="51" ncloc="49" classes="1" methods="7" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="3" elements="18" coveredelements="5"/>
       </file>
     </package>
     <package name="WS\Http\Requests">
@@ -27,10 +32,10 @@
         <class name="WS\Http\Requests\PostRequest" namespace="WS\Http\Requests">
           <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
         </class>
-        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="16" type="stmt" count="2"/>
-        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="27" type="stmt" count="2"/>
+        <line num="14" type="method" name="authorize" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="24" type="method" name="rules" visibility="public" complexity="1" crap="1" count="1"/>
+        <line num="27" type="stmt" count="1"/>
         <metrics loc="33" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="4" coveredelements="4"/>
       </file>
     </package>
@@ -43,19 +48,19 @@
       </file>
       <file name="/Users/sid/Code/web/laravel-test-workshop/app/WS/Models/Post.php">
         <class name="WS\Models\Post" namespace="WS\Models">
-          <metrics complexity="4" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+          <metrics complexity="4" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="10" coveredelements="0"/>
         </class>
-        <line num="12" type="method" name="user" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="14" type="stmt" count="2"/>
-        <line num="17" type="method" name="category" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="19" type="stmt" count="2"/>
-        <line num="22" type="method" name="tags" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="24" type="stmt" count="2"/>
-        <line num="30" type="method" name="setTitleAttribute" visibility="public" complexity="1" crap="1" count="4"/>
-        <line num="32" type="stmt" count="4"/>
-        <line num="33" type="stmt" count="4"/>
-        <line num="34" type="stmt" count="4"/>
-        <metrics loc="35" ncloc="29" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="10" coveredelements="10"/>
+        <line num="12" type="method" name="user" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="17" type="method" name="category" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="22" type="method" name="tags" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="30" type="method" name="setTitleAttribute" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <metrics loc="35" ncloc="29" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="10" coveredelements="0"/>
       </file>
       <file name="/Users/sid/Code/web/laravel-test-workshop/app/WS/Models/Tag.php">
         <class name="WS\Models\Tag" namespace="WS\Models">
@@ -65,13 +70,13 @@
       </file>
       <file name="/Users/sid/Code/web/laravel-test-workshop/app/WS/Models/User.php">
         <class name="WS\Models\User" namespace="WS\Models">
-          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
         </class>
-        <line num="39" type="method" name="posts" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="41" type="stmt" count="1"/>
-        <metrics loc="43" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        <line num="39" type="method" name="posts" visibility="public" complexity="1" crap="2.00" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <metrics loc="43" ncloc="28" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
       </file>
     </package>
-    <metrics files="6" loc="192" ncloc="133" classes="4" methods="12" coveredmethods="12" conditionals="0" coveredconditionals="0" statements="17" coveredstatements="17" elements="29" coveredelements="29"/>
+    <metrics files="6" loc="182" ncloc="145" classes="4" methods="14" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="5" elements="34" coveredelements="9"/>
   </project>
 </coverage>

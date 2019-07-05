@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role'
     ];
 
     /**
@@ -39,5 +39,15 @@ class User extends Authenticatable
     public function posts()
     {
         return $this->hasMany(Post::class, 'user_id');
+    }
+
+    public function isAuthorOf(Post $post)
+    {
+        return $this->id === $post->user_id;
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
     }
 }

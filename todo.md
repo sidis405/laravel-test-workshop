@@ -17,16 +17,19 @@
 [x] - Utente deve poter creare post
 [x] - Utente deve poter categorizzare post
 [x] - Utente deve poter taggare post
+
 [ ] - Utente puo' caricare foto
 [ ] - Post hanno foto di default
 
-[ ] - Utente deve poter visionare form di aggiornamento post
-[ ] - Utente deve poter modificare post
-[ ] - Utente deve poter modificare categoria post
-[ ] - Utente deve poter modificare tag post
-[ ] - Se il post viene modificateo dall'autore - admin riceve mail
-[ ] - Se il post viene modificateo dall'admin - autore riceve mail
-[ ] - Se un admin modifica il proprio post, la mail non viene inviata
+[x] - Utente ospite non deve poter visionare form di aggiornamento post
+[x] - Utente deve poter visionare form di aggiornamento post
+[x] - Utente deve poter modificare post
+[x] - Utente deve poter modificare categoria post
+[x] - Utente deve poter modificare tag post
+
+[x] - Se il post viene modificateo dall'autore - admin riceve mail
+[x] - Se il post viene modificateo dall'admin - autore riceve mail
+[x] - Se un admin modifica il proprio post, la mail non viene inviata
 
 [ ] - Utente deve poter cancellare post
 

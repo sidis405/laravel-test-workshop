@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use WS\Models\Tag;
 use Tests\TestCase;
 use WS\Models\Post;
 use WS\Models\Category;
@@ -54,6 +55,7 @@ class PostCreationTest extends TestCase
     {
         // arrange
         $this->signIn();
+        $tags  = factory(Tag::class, 3)->create();
 
         // act
         $postData = [
@@ -61,12 +63,16 @@ class PostCreationTest extends TestCase
             'category_id' => factory(Category::class)->create()->id,
             'preview' => 'First preview',
             'body' => 'First body',
+            'tags' => $tags->pluck('id')->toArray()
         ];
         $response = $this->post(route('posts.store'), $postData);
 
         // assert
+        $post = Post::with('tags')->first();
         $this->assertDatabaseHas('posts', ['title' => $postData['title']]);
-        $response->assertRedirect(route('posts.show', Post::first()));
+        $response->assertRedirect(route('posts.show', $post));
+
+        $this->assertEquals($postData['tags'], $post->tags->pluck('id')->toArray());
     }
 
     /** @test */

@@ -32,6 +32,22 @@
         <ul>
             <li style="color: #555753;">✓ Post can create own slug</li>
         </ul>
+        <h2 id="Tests\Unit\UserTest">Unit\User</h2>
+        <ul>
+            <li style="color: #555753;">✓ User can verify own authorship of post</li>
+            <li style="color: #555753;">✓ User can tell if is admin</li>
+        </ul>
+        <h2 id="Tests\Feature\ImageUploadingTest">Feature\ImageUploading</h2>
+        <ul>
+            <li style="color: #555753;">✓ User can upload image to own post</li>
+        </ul>
+        <h2 id="Tests\Feature\MailSendingOnUpdateTest">Feature\MailSendingOnUpdate</h2>
+        <ul>
+            <li style="color: #555753;">✓ On post update a job is queued</li>
+            <li style="color: #555753;">✓ If author updates own post first admin is notified</li>
+            <li style="color: #555753;">✓ If admin updates post author is notified</li>
+            <li style="color: #555753;">✓ If admin updates own post no one gets notified</li>
+        </ul>
         <h2 id="Tests\Feature\PostCreationTest">Feature\PostCreation</h2>
         <ul>
             <li style="color: #555753;">✓ Guest user cannot see post creation form</li>
@@ -39,6 +55,14 @@
             <li style="color: #555753;">✓ Guest user cannot create post</li>
             <li style="color: #555753;">✓ User can create post</li>
             <li style="color: #555753;">✓ Post creation has mandatory fields</li>
+        </ul>
+        <h2 id="Tests\Feature\PostUpdatingTest">Feature\PostUpdating</h2>
+        <ul>
+            <li style="color: #555753;">✓ Guest user cannot see updating form</li>
+            <li style="color: #555753;">✓ User can see updating form</li>
+            <li style="color: #555753;">✓ Guest cannot update post</li>
+            <li style="color: #555753;">✓ Usr can update post</li>
+            <li style="color: #555753;">✓ Updating has mandatory fields</li>
         </ul>
         <h2 id="Tests\Feature\PostViewingTest">Feature\PostViewing</h2>
         <ul>
